@@ -1,0 +1,225 @@
+html
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* background-image: url("./image1.jpg");      isse pura html mai har ek element ho background image chala jayega  */ 
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    background-image: url("./image1.jpg" );
+    background-position: center;
+}
+.box
+{
+    position: relative;
+    width: 390px;
+    height: 450px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+.box form 
+{
+    margin: 4px;
+    position:absolute;
+    inset: 4px;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 15px;
+    color: #fff;
+    overflow: hidden;
+    background: #070707;
+    padding: 30px  20px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.box form h3
+{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box .input
+{
+        margin: 18px;
+        background: #fff;
+        border: none;
+        outline: none;
+        max-width: 100%;
+        padding: 10px 35px;
+        font-size: 16px;
+        border-radius: 9999px;
+        box-shadow: 2px 5px 10px rgb(5, 5, 5);
+        color: #000;
+      
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: absolute;
+    padding: 1em 2em;
+    margin-top: 229px;
+    width: 145px;
+    height: 40px;
+    margin-left: 18px;
+    border: 0;
+    background-color: #000;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+   }
+   
+   button::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(
+           #488cfb,
+           #29dbbc,
+           #ddf505,
+           #ff9f0e,
+           #e440bb,
+           #655adc,
+           #488cfb
+       );
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkitmask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+   }
+   
+   button:hover::after {
+    animation-play-state: running;
+   }
+   
+   @keyframes rotate-hue {
+    to {
+     filter: hue-rotate(1turn);
+    }
+   }
+   
+   button,
+   button::after {
+    box-sizing: border-box;
+   }
+   
+   button:active {
+    --border-width: 5px;
+   }
+
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#6ce603,#6ce603,#6ce603);
+    z-index: 1;
+    animation: animate 6s linear infinite;
+    transform-origin: bottom right;
+    animation-delay: -3s;
+}
+.borderline
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#fd0468,#fd0468,#fd0468);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderline::after
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    transparent,#fefb11,#fefb11,#fefb11);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate
+{ 
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.col-sm-8{
+    text-align: left;
+}

@@ -1,0 +1,45 @@
+html body {
+  background-color: black;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: 'Satisfy', cursive;
+  background-color:#eeeeee;
+}
+.slider {
+  max-width: 80%;
+  text-align: center;
+  
+}
+
+.container {
+  max-width: 100%;
+  background-color: grey;
+}
+
+.jumbotron {
+  font-family: 'Satisfy', cursive;
+  margin-top: 1%;
+  text-align: center;  
+
+}
+
+.blurb {
+  text-align: justify;
+  font-size: 20px;  
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.invert {
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+/*#card-img td {
+  top: 0;
+  max-width: 230px;
+  height: 100%
+}*/

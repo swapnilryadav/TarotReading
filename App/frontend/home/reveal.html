@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Three Card Tarot Reading</title>
+  <link rel="stylesheet" href="reveal.html">
+  <script src="home.js"></script>
+  <meta charset="UTF-8">
+  <title>SELF, SITUATION, CHALLENGES ALL ABOUT OUR MOONS</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <!--JS for this webapp-->
+  <script src="js/index.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <!--lodash-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js.map"></script>
+</head>
+
+<body>
+  <div class="container-flex">
+    <div class="jumbotron">
+      <h1>ALL ABOUT OUR MOONS</h1>
+      <br>
+      <p id="blurb" class="blurb">
+        The three card reading is one of the simplest tarot card spreads.<br /> The card to the left represents events in your past that may have led to the position you are in now. The Tarot card in the center position represents your outlook on your
+        current state of affairs. The card furthest to the right suggests a possible outcome if no action is taken to change the current course. The future is not set in stone &amp; can be changed through action.
+        <br />
+        <br /> Please focus on your question &amp; click the &quot;My Reading&quot; button below when you are ready.
+      </p>
+      <div class="container-flex">
+        <div class="row">
+          <div class="col-md-3">
+          </div>
+          <div class="col-md-5"><button type="button" class="btn btn-primary btn-lg" id="pastPresentFuture" onclick="pastPresentFuture()">My Reading</button></div>
+          <div class="col-md-3">
+            <p>Percentage of Reversals</p>
+            <input class="slider" type="range" min="0" max="50" value="0" onchange="showValue(this.value)" />
+            <span id="range">0</span>%
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+      </div>
+
+      <div class="container-flex">
+        <div class="row">
+          <div class="col-md-4">
+            <center>
+              <hr>
+              <h2>SELF</h2>
+              <div id="img-1"></div>
+              <div id="info-1"></div>
+            </center>
+          </div>
+          <div class="col-sm-4">
+            <center>
+              <hr>
+              <h2>SITUATION</h2>
+              <div id="img-2"></div>
+              <div id="info-2"></div>
+            </center>
+          </div>
+          <div class="col-sm-4">
+            <center>
+              <hr>
+              <h2>CHALLENGES</h2>
+              <div id="img-3"></div>
+              <div id="info-3"></div>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

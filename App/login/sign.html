@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="sign.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <span class="borderline"></span>
+        <h3> SIGN UP </h3>
+        <form method="POST" id="sign-up-form" action="/register">
+            <input placeholder="Mobile Number" id="mobilenumber" class="input" name="mobilenumber" required>
+            <input placeholder="Email" id="email" class="input" name="email" type="email" required>
+            <input placeholder="Password" id="password" class="input" name="password" type="password" required>
+            <input placeholder="Confrim Password" id="cpassword"class="input" name="confirmPassword" type="password" required>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms of service</label>
+                <span class="error-message"></span>
+        
+                <p>Already have an account? <a href="http://localhost:2244/login.html"> Log in</a></p>
+
+                <p style="color:red;margin-top:20px"></p>
+
+                </div>
+                <button type="submit">Sign In</button>            
+        </form>
+
+        </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    const formElement = document.getElementById('sign-up-form');
+
+
+    formElement.addEventListener("submit", function(event) { 
+        event.preventDefault();  
+
+        const password = formElement.password.value;
+        const confirmPassword = formElement.confirmPassword.value;
+
+
+        // TODO - Uncomment this befor presenatation
+       // if (!validatePassword(password)) { 
+           // alert("Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character."); 
+          // return; 
+         //}
+
+        if(password !== confirmPassword) {
+            alert("Password and Confirm Password should be the same."); 
+            return; 
+        }
+  
+        formElement.submit(); 
+    }); 
+    
+ 
+ 
+    function validatePassword(password) { 
+        return /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[!@#$%^&*()_+])[A-Za z\d!@#$%^&*()_+]{8,}$/.test(password); 
+    } 
+
+</script>
+
+

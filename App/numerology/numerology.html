@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="NM.css">
+  <title>Numerology</title>
+</head>
+<body>
+  <div id="particles-js">
+    <h1>Numerology</h1>
+    <form id="numerologyForm" onsubmit="return calculateNumerology(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required><br>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" required><br>
+      <input type="submit" value="Calculate">
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="nm.js"></script>
+</body>
+</html>

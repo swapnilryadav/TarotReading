@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot card  </title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/05f6bcf2a6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+     
+    <!----------------------Home Page--------------------->
+    
+    <div class="menu">
+        <nav >
+            <ul>
+                <div class="toggle">
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
+                <li style="--i:0;">
+                    <a href="#">
+                        <ion-icon name="home-outline"></ion-icon><span>Home</span>
+                    </a>
+                </li>
+                <li style="--i:1;">
+                    <a href="/about/about.html">
+                        <ion-icon name="person-circle-outline"></ion-icon> <span>About us</span>
+                    </a>
+                </li>
+                <li style="--i:2;">
+                    <a href="/numerology/numerology.html">
+                        <ion-icon name="briefcase-outline"></ion-icon><span>Numerology</span>
+                    </a>
+                </li>
+                 <li style="--i:3;">
+                    <a href="http://localhost:2244/sign.html">
+                        <ion-icon name="mail-outline"></ion-icon><span>Sign up</span>
+                    </a>
+                </li> 
+                
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+         <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div> 
+    </div>
+    <div class="data1">
+        <h2><span>All ABOUT OUR MOONS </span></h2>
+        <h6>Created By <span class="auto-input"></span></h6>
+       
+        <a href="./reveal.html" class="button">
+            <!-- <a class="disabled button-warning" href="shuffle.html"><h1>reveal the meaning</a></h1> -->
+            <span class="button_text" href="./reveal.html" >
+                Reveal my destiny
+            </span>
+           
+        </a>
+    </div>
+    <img src="/assests/image3.jpg.png" alt="">
+    <!-- autotype text -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-input", {
+            strings: ["  Vruksha Kothari", "Bhavika Thadani", "Shreya Shetty "],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+        })
+        // blur while backspacing
+    </script>
+    <!-- background -->
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!-- on scroll indicator -->
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+    <!-- rnd navbar -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+
+        toggle.onclick = function () {
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
